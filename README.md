@@ -13,8 +13,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0202-happy-number](https://github.com/Imran-445/DSA/tree/master/0202-happy-number) |
+| [0876-middle-of-the-linked-list](https://github.com/Imran-445/DSA/tree/master/0876-middle-of-the-linked-list) |
 ## Floyd's Cycle Finding Algorithm
 |  |
 | ------- |
 | [0202-happy-number](https://github.com/Imran-445/DSA/tree/master/0202-happy-number) |
+## Linked List
+|  |
+| ------- |
+| [0876-middle-of-the-linked-list](https://github.com/Imran-445/DSA/tree/master/0876-middle-of-the-linked-list) |
 <!---LeetCode Topics End-->
