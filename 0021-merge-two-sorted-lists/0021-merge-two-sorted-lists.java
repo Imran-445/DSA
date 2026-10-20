@@ -1,6 +1,14 @@
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 
+        if(list1==null){
+            return list2;
+        }
+
+        if(list2==null){
+            return list1;
+        }
+        
         ListNode ptr1 = list1;
         ListNode ptr2 = list2;
 
@@ -29,24 +37,11 @@ class Solution {
             }
         }
 
-        // Merge remaining elements
-        if (head == null) {
-            if (ptr1 != null) {
-                return ptr1;
-            }
-            return ptr2;
-        }
 
-        while (ptr1 != null) {
-            temp.next = ptr1;
-            temp = temp.next;
-            ptr1 = ptr1.next;
-        }
-
-        while (ptr2 != null) {
-            temp.next = ptr2;
-            temp = temp.next;
-            ptr2 = ptr2.next;
+        if(ptr1!=null){
+            temp.next=ptr1;
+        }else{
+            temp.next=ptr2;
         }
 
         return head;
