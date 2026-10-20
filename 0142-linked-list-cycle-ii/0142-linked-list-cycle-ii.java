@@ -34,37 +34,37 @@ public class Solution {
     }
 
 
-   public ListNode detectCycle (ListNode head) {
-      int length=0;
-      ListNode fast = head;
-      ListNode slow = head;
+    public ListNode detectCycle (ListNode head) {
+        int length=0;
+        ListNode fast = head;
+        ListNode slow = head;
 
-      while(fast!=null && fast.next!=null) {
-         fast = fast.next.next;
-         slow = slow.next;
+        while(fast!=null && fast.next!=null) {
+            fast = fast.next.next;
+            slow = slow.next;
 
-         if (slow == fast) {
-            length = lengthCycle(slow);
-            break;
-         }
-      }
-      
-      if(length==0) {
-         return null;
-      }
-      
-      ListNode ptr1 = head;      
-      ListNode ptr2 = head;
-      
-      while(length>0){
-         ptr2=ptr2.next;
-         length--;
-      }
-      
-      while(ptr1!=ptr2){
-         ptr1=ptr1.next;
-         ptr2=ptr2.next;
-      }
-      return ptr1;
+            if (slow == fast) {
+                length = lengthCycle(slow);
+                break;
+            }
+        }
+        
+        if(length==0) {
+            return null;
+        }
+        
+        ListNode ptr1 = head;      
+        ListNode ptr2 = head;
+        
+        while(length>0){
+            ptr2=ptr2.next;
+            length--;
+        }
+        
+        while(ptr1!=ptr2){
+            ptr1=ptr1.next;
+            ptr2=ptr2.next;
+        }
+        return ptr1;
     }
 }
