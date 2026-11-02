@@ -1,11 +1,10 @@
 class Solution {
     public int[] searchRange(int[] nums, int target) {
         int[] ans = {-1,-1};
-        int start = search(nums,target,true);    //true as we're trying to find the start value
-        int end = search(nums,target,false);     //false as we're trying to find the end value
-        
-        ans[0]=start;
-        ans[1]=end;
+        ans[0] = search(nums,target,true);    //true as we're trying to find the start value
+        if(ans[0] != -1){
+            ans[1] = search(nums,target,false);     //false as we're trying to find the end value
+        }
 
         return ans;
     }
