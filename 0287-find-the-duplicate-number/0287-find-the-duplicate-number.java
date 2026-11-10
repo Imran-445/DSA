@@ -7,10 +7,12 @@ class Solution {
                 int correct_index=nums[i]-1;
                 if(nums[i]!=nums[correct_index]){
                     swap(nums,i,correct_index);
-                }else{
+                }
+                else{
                     return nums[i];
                 }
-            }else{
+            }
+            else{
                 i++;
             }
         }
