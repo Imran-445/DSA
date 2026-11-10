@@ -1,6 +1,6 @@
 class Solution {
     int search(int nums[], int target){
-        int pivot = findPivot(nums);
+        int pivot = findPivotWithDuplicates(nums);
         if (pivot == -1) {
             return binarySearch(nums, target, 0 , nums.length - 1);
         }
